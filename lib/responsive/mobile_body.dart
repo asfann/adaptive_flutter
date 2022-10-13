@@ -71,41 +71,41 @@ class _MobileBodyState extends State<MobileBody> {
     }
     return null;
   }
-
-  Alice alice = Alice();
-  void _doCall1() async {
-    final response = await http.post(Uri.parse('https://front.bitqi.com/v2/Login/sign-in/registration'),
-      body: {
-        "userName": 'aivnrepb',
-        "identificator": 'asfan7899@gmail.com',
-        "password": 'password',
-        "referral": "string",
-        "language": "En",
-        "timeZone": "string",
-        "clientId": "string",
-        "url": "string",
-        "captchaName": "string",
-        "captchaToken": "string",
-      },).interceptWithAlice(alice, body: {
-      "userName": 'aivnrepb',
-      "identificator": 'asfan7899@gmail.com',
-      "password": 'password',
-      "referral": "string",
-      "language": "En",
-      "timeZone": "string",
-      "clientId": "string",
-      "url": "string",
-      "captchaName": "string",
-      "captchaToken": "string",
-    },);
-    alice.onHttpResponse(response);
-  }
-
-  @override
-  void initState() {
-    _doCall1();
-    super.initState();
-  }
+  //
+  // Alice alice = Alice();
+  // void _doCall1() async {
+  //   final response = await http.post(Uri.parse('https://front.bitqi.com/v2/Login/sign-in/registration'),
+  //     body: {
+  //       "userName": 'aivnrepb',
+  //       "identificator": 'asfan7899@gmail.com',
+  //       "password": 'password',
+  //       "referral": "string",
+  //       "language": "En",
+  //       "timeZone": "string",
+  //       "clientId": "string",
+  //       "url": "string",
+  //       "captchaName": "string",
+  //       "captchaToken": "string",
+  //     },).interceptWithAlice(alice, body: {
+  //     "userName": 'aivnrepb',
+  //     "identificator": 'asfan7899@gmail.com',
+  //     "password": 'password',
+  //     "referral": "string",
+  //     "language": "En",
+  //     "timeZone": "string",
+  //     "clientId": "string",
+  //     "url": "string",
+  //     "captchaName": "string",
+  //     "captchaToken": "string",
+  //   },);
+  //   alice.onHttpResponse(response);
+  // }
+  //
+  // @override
+  // void initState() {
+  //   _doCall1();
+  //   super.initState();
+  // }
 
 
   @override
@@ -141,7 +141,7 @@ class _MobileBodyState extends State<MobileBody> {
                           hintText: 'Имя пользователя',
                           iconShower: true,
                           iconPressed: () {
-                            alice.showInspector();
+                            // alice.showInspector();
                           },
                           customIcon: const Icon(Icons.info_outline),
                           errorText: _submitted ? _userErrorText : null,

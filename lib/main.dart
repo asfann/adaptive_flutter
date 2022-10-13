@@ -1,3 +1,4 @@
+import 'package:adaptive_flutter/confirm_cubit/confirm_cubit.dart';
 import 'package:adaptive_flutter/registration_cubit/registration_cubit.dart';
 import 'package:adaptive_flutter/responsive/desktop_body.dart';
 import 'package:adaptive_flutter/responsive/mobile_body.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => RegistrationCubit(user: context.read<UserRepository>()))
+          BlocProvider(create: (context) => RegistrationCubit(user: context.read<UserRepository>())),
+          BlocProvider(create: (context) => ConfirmCubit(user: context.read<UserRepository>()))
         ],
         child: MaterialApp(
           navigatorKey: alice.getNavigatorKey(),

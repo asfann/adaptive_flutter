@@ -16,10 +16,10 @@ class SharedPreferencesRepository {
   }
 
   Future setToken(String token) async {
-    return _prefs.setString("signinToken", token);
+    return _prefs.setString("signingToken", token);
   }
 
   String? getToken() {
-    return _prefs.getString("signinToken");
+    return _prefs.getString("signingToken");
   }
 }

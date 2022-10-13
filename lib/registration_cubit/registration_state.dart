@@ -29,4 +29,3 @@ class RegistrationStateFailure extends RegistrationState {
   @override
   List<Object> get props => [];
 }
-
